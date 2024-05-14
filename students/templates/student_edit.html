@@ -1,0 +1,37 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Student</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-800 text-white p-6">
+    <header class="bg-indigo-400 shadow-md p-2">
+        <div class="container mx-auto flex items-center justify-between">
+            <div class="flex items-center">
+                <div class="flex flex-col">
+                    <h1 class="text-2xl font-semibold">EVENT-DRIVEN PROGRAMMING</h1>
+                    <p class="text-sm mt-0">FINAL PROJECT</p>
+                    <p class="text-xs">DEVELOPED BY: DAGATAN, OPERARIO</p>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="container mx-auto mt-10 p-6 bg-gray-700 rounded-lg shadow-md">
+        <h2 class="text-2xl font-bold mb-6">Edit Student</h2>
+        <form method="POST" class="space-y-4"> 
+
+            {% csrf_token %}
+            <div class="text-black">{{ form.first_name }}</div>
+            <div class="text-black">{{ form.last_name }}</div>
+            <div class="text-black">{{ form.course }}</div>
+            <div>{{ form.gender }}</div>
+            <div class="text-black">{{ form.age }}</div>
+            
+            <button type="submit" class="bg-green-400 text-white px-4 py-2 rounded hover:bg-green-800 transition duration-200">Update</button>
+        </form>
+    </div>
+</body>
+</html>
