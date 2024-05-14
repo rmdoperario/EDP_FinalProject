@@ -1,7 +1,3 @@
-Sure, here's a README description for the provided HTML templates:
-
----
-
 # Student Management System HTML Templates
 
 This repository contains HTML templates for a Student Management System, designed for educational purposes. The system includes features for viewing, adding, editing, and deleting student records.
